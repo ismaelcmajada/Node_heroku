@@ -7,8 +7,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var bicicletasRouter = require('./routes/bicicletas');
 
 var favicon = require('serve-favicon');
 
@@ -33,10 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(favicon(__dirname + '/public/images/favicon.gif'));
 
-app.use('/bicicletas', bicicletasRouter);
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-
 
 //Error handlers
 
